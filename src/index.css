@@ -312,7 +312,7 @@ nav ul li a:hover {
 
 /* hamburger button and nav bar */
 
-.navbar {
+/* .navbar {
   position: fixed;
   width: 100%;
   min-height: 100%;
@@ -327,20 +327,42 @@ nav ul li a:hover {
   background-color: var(--clr-white);
   border: 0;
   margin: 0 0 0 2rem;
+} */
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
-.hamburger-button[value='true'] {
-  background-color: red;
+header .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  transition: 1s;
+  transform: translatex(-100vh);
 }
 
-
+header .responsive-nav {
+  transform: none;
+}
 
 @media (min-width: 40em) {
-  .hamburger {
+  .nav-btn {
     display: none;
   }
 
-  .navbar {
+  header .navbar {
     position: relative;
+    transform: translatex(0);
   }
+  
 }
