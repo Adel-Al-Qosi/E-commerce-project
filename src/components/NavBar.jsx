@@ -3,10 +3,10 @@ import '../index.css'
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="navbar">
       <ul className="flex">
         <li>
-          <NavLink exact to="/">Collections</NavLink>
+          <NavLink to="/">Collections</NavLink>
         </li>
         <li>
           <NavLink to="/Men">Men</NavLink>

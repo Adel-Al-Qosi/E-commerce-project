@@ -15,6 +15,7 @@
   --clr-light-grayish-blue: hsl(223, 64%, 98%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-black-alpha: rgba(0, 0, 0, 75%);
+  --clr-black: rgb(0, 0, 0);
 
   /* font-sizes */
   --fs-p: 1rem;
@@ -75,15 +76,22 @@ p {
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: var(--fs-400);
-  color: rgb(0, 0, 0);
+  color: var(--clr-black);
   background-color: var(--clr-white);
   line-height: 1.5;
   min-height: 100vh;
+  margin-inline: auto;
 
   display: grid;
   grid-template-rows: min-content 1fr;
 
   overflow-x: hidden;
+}
+
+@media (min-width: 59em) {
+  body {
+    width: 80%;
+  }
 }
 
 /* make images easier to work with */
@@ -175,3 +183,164 @@ select {
 /* Compontents         */
 /* ------------------- */
 
+/* header */
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--clr-grayish-blue);
+  padding-block: 1.5rem;
+  
+}
+
+.logo {
+  height: 100%;
+}
+
+.header > *:first-child {
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--clr-dark-grayish-blue)
+}
+
+nav ul li a:hover {
+  color: var(--clr-black);
+  border-bottom: .4rem solid var(--clr-orange);
+  padding-bottom: 2em;
+}
+
+.header > *:last-child {
+  align-items: center;
+}
+
+.header > *:last-child > button {
+  aspect-ratio: 1;
+  background-color: var(--clr-white);
+  border: 0;
+  background-image: url(./images/icon-cart.svg);
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.header > *:last-child > img {
+  width: 2rem;
+  padding: .2rem;
+  margin-right: 1.2rem;
+}
+
+/* not working */
+.header > *:last-child > img:hover,
+.header > *:last-child > img:focus {
+  padding: 0;
+  cursor: pointer;
+  width: 2rem;
+  border: .2rem solid var(--clr-orange);
+  border-radius: 50%;
+}
+
+
+@media (min-width: 45em) {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--clr-grayish-blue);
+    padding-block: 1.3rem;
+    
+  }
+  
+  .logo {
+    height: 100%;
+  }
+  
+  .header > *:first-child {
+    align-items: center;
+  }
+  
+  li {
+    list-style: none;
+    
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--clr-dark-grayish-blue)
+  }
+  
+  nav ul li a:hover {
+    color: var(--clr-black);
+    border-bottom: .4rem solid var(--clr-orange);
+    padding-bottom: 2em;
+  }
+  
+  .header > *:last-child {
+    align-items: center;
+  }
+  
+  .header > *:last-child > button {
+    aspect-ratio: 1;
+    background-color: var(--clr-white);
+    border: 0;
+    background-image: url(./images/icon-cart.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  
+  .header > *:last-child > img {
+    width: 4rem;
+    padding: .2rem;
+  }
+  
+  .header > *:last-child > img:hover {
+    padding: 0;
+    cursor: pointer;
+    width: 4rem;
+    border: .2rem solid var(--clr-orange);
+    border-radius: 50%;
+  }
+}
+
+/* hamburger button and nav bar */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+}
+
+.hamburger-button {
+  aspect-ratio: 1;
+  background-image: url(./images/icon-menu.svg);
+  background-repeat: no-repeat;
+  width: 1.1rem;
+  background-size: cover;
+  background-color: var(--clr-white);
+  border: 0;
+  margin: 0 0 0 2rem;
+}
+
+.hamburger-button[value='true'] {
+  background-color: red;
+}
+
+
+
+@media (min-width: 40em) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}
