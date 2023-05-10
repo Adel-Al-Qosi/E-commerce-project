@@ -339,7 +339,7 @@ header .navbar {
   display: flex;
   background-color: var(--clr-white);
   gap: 1.5rem;
-  transition: 1s;
+  /* transition: 1s; */
   transform: translateX(-100vh);
   padding-top: 5rem;
 }
