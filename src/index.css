@@ -335,7 +335,7 @@ header .navbar {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 70%;
   display: flex;
   background-color: var(--clr-white);
   gap: 1.5rem;
@@ -344,8 +344,15 @@ header .navbar {
   padding-top: 5rem;
 }
 
-header .navbar::after {
-  
+.navbar::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 70%;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 5; 
 }
 
 .nav-close-btn {
@@ -373,6 +380,10 @@ header .responsive-nav {
     padding-top: 0;
     order: 2;
     flex-direction: row;
+  }
+
+  .navbar::after {
+    display: none; 
   }
 
   .column {
