@@ -336,7 +336,7 @@ header .navbar {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 70%;
   display: flex;
   background-color: var(--clr-white);
   gap: 1.5rem;
@@ -346,13 +346,7 @@ header .navbar {
 }
 
 .bg-opacite {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 30%;
-  background-color: rgba(0, 0, 0, .4);
-  opacity: .5;
+  
 }
 
 .nav-close-btn {
