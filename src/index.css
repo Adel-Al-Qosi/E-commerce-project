@@ -403,6 +403,7 @@ header .responsive-nav {
   top: 6rem;
   right: 8%;
   height: 20rem;
+  width: 84%;
   background-color: #fff;
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
   border-radius: 0.25rem;
