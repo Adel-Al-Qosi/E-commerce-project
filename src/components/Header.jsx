@@ -7,7 +7,7 @@ const Header = () => {
   
   return (
     <header className="flex header">
-      <div className="flex">
+      <div className="flex order">
         <img src={logo} alt="logo"/>
         <NavBar />
       </div>

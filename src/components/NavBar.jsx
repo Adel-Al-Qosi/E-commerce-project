@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <>
       <nav ref={navRef} className="navbar">
-        <ul className="flex">
+        <ul className="flex column">
           <li>
             <NavLink to="/">Collections</NavLink>
           </li>
@@ -30,6 +30,7 @@ const NavBar = () => {
             <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>
+        <div className="bg-opacite"></div>
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
           <FaTimes />
         </button>

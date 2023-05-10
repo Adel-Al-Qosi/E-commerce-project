@@ -130,6 +130,10 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.column {
+  flex-direction: column;
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
@@ -197,6 +201,11 @@ select {
   height: 100%;
 }
 
+.order *:first-child {
+  order: 1;
+}
+
+
 .header > *:first-child {
   align-items: center;
 }
@@ -208,7 +217,8 @@ li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--clr-dark-grayish-blue)
+  color: var(--clr-black);
+  font-weight: var(--fw-bold);
 }
 
 nav ul li a:hover {
@@ -237,7 +247,6 @@ nav ul li a:hover {
   margin-right: 1.2rem;
 }
 
-/* not working */
 .header > *:last-child > img:hover,
 .header > *:last-child > img:focus {
   padding: 0;
@@ -248,7 +257,7 @@ nav ul li a:hover {
 }
 
 
-@media (min-width: 45em) {
+@media (min-width: 46em) {
   .header {
     justify-content: space-between;
     align-items: center;
@@ -312,29 +321,14 @@ nav ul li a:hover {
 
 /* hamburger button and nav bar */
 
-/* .navbar {
-  position: fixed;
-  width: 100%;
-  min-height: 100%;
-}
-
-.hamburger-button {
-  aspect-ratio: 1;
-  background-image: url(./images/icon-menu.svg);
-  background-repeat: no-repeat;
-  width: 1.1rem;
-  background-size: cover;
-  background-color: var(--clr-white);
-  border: 0;
-  margin: 0 0 0 2rem;
-} */
-
 header .nav-btn {
   padding: 5px;
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
+  margin-left: 2rem;
+  margin-top: .5rem;
 }
 
 header .navbar {
@@ -344,25 +338,52 @@ header .navbar {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--clr-white);
   gap: 1.5rem;
   transition: 1s;
-  transform: translatex(-100vh);
+  transform: translateX(-100vh);
+  padding-top: 5rem;
+}
+
+.bg-opacite {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, .4);
+  opacity: .5;
+}
+
+.nav-close-btn {
+  position: absolute;
+  left: 0rem;
+  top: 2rem;
 }
 
 header .responsive-nav {
   transform: none;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 46em) {
   .nav-btn {
     display: none;
   }
 
   header .navbar {
     position: relative;
-    transform: translatex(0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: 1s;
+    transform: translateX(0);
+    padding-top: 0;
+    order: 2;
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: row;
   }
   
 }
