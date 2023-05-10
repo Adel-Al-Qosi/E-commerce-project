@@ -230,16 +230,6 @@ nav ul li a:hover {
   align-items: center;
 }
 
-.header > *:last-child > button {
-  aspect-ratio: 1;
-  background-color: var(--clr-white);
-  border: 0;
-  background-image: url(./images/icon-cart.svg);
-  background-repeat: no-repeat;
-  width: 1.5rem;
-  cursor: pointer;
-}
-
 .header > *:last-child > img {
   width: 2rem;
   padding: .2rem;
@@ -293,17 +283,6 @@ nav ul li a:hover {
     align-items: center;
   }
   
-  .header > *:last-child > button {
-    aspect-ratio: 1;
-    background-color: var(--clr-white);
-    border: 0;
-    background-image: url(./images/icon-cart.svg);
-    background-repeat: no-repeat;
-    width: 1.5rem;
-    margin-right: 2rem;
-    cursor: pointer;
-  }
-  
   .header > *:last-child > img {
     width: 4rem;
     padding: .2rem;
@@ -355,6 +334,10 @@ header .navbar {
   z-index: 5; 
 }
 
+.order-1 {
+  order: 1;
+}
+
 .nav-close-btn {
   position: absolute;
   left: 0rem;
@@ -390,4 +373,18 @@ header .responsive-nav {
     flex-direction: row;
   }
   
+}
+
+/* cart */
+.cart {
+  aspect-ratio: 1;
+  background-color: var(--clr-white);
+  border: 0;
+  background-image: url(./images/icon-cart.svg);
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+
+  transition: all 0.3s ease-in-out;
 }

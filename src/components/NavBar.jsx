@@ -18,19 +18,19 @@ const NavBar = () => {
     <>
       <nav ref={navRef} className="navbar">
         <ul className="flex column">
-          <li>
+          <li className="order-1">
             <NavLink to="/" onClick={hideNavBar}>Collections</NavLink>
           </li>
-          <li>
+          <li className="order-1">
             <NavLink to="/Men" onClick={hideNavBar}>Men</NavLink>
           </li>
-          <li>
+          <li className="order-1">
             <NavLink to="/Women" onClick={hideNavBar}>Women</NavLink>
           </li>
-          <li>
+          <li className="order-1">
             <NavLink to="/About" onClick={hideNavBar}>About</NavLink>
           </li>
-          <li>
+          <li className="order-1">
             <NavLink to="/Contact" onClick={hideNavBar}>Contact</NavLink>
           </li>
         </ul>
