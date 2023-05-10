@@ -223,8 +223,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: var(--clr-black);
-  border-bottom: .4rem solid var(--clr-orange);
-  padding-bottom: 2em;
+  
 }
 
 .header > *:last-child {
@@ -336,7 +335,7 @@ header .navbar {
   top: 0;
   left: 0;
   height: 100%;
-  width: 70%;
+  width: 100%;
   display: flex;
   background-color: var(--clr-white);
   gap: 1.5rem;
@@ -345,7 +344,7 @@ header .navbar {
   padding-top: 5rem;
 }
 
-.bg-opacite {
+header .navbar::after {
   
 }
 
