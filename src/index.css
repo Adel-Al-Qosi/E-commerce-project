@@ -320,7 +320,7 @@ header .navbar {
   gap: 1.5rem;
   /* transition: 1s; */
   transform: translateX(-100vh);
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 .navbar::after {
@@ -341,7 +341,7 @@ header .navbar {
 .nav-close-btn {
   position: absolute;
   left: 0rem;
-  top: 2rem;
+  top: 1.4rem;
 }
 
 header .responsive-nav {
@@ -386,7 +386,7 @@ header .responsive-nav {
   cursor: pointer;
   padding: 0.5rem;
   margin-right: 2rem;
-  transition: all 0.3s ease-in-out;
+
 }
 
 .cart-header {
@@ -401,9 +401,9 @@ header .responsive-nav {
 .cart-container {
   position: fixed;
   top: 6rem;
-  right: 8%;
+  right: 2%;
   height: 20rem;
-  width: 84%;
+  width: 96%;
   background-color: #fff;
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
   border-radius: 0.25rem;
@@ -412,7 +412,7 @@ header .responsive-nav {
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
-  border-radius: .5rem;
+  border-radius: .8rem;
 }
 
 .cart-items {
@@ -465,7 +465,7 @@ header .responsive-nav {
     flex-direction: column;
     justify-content: space-between;
     z-index: 10;
-    border-radius: .5rem;
+    border-radius: .8rem;
   }
   
   .cart-items {
@@ -499,3 +499,62 @@ header .responsive-nav {
   }
 }
 
+/* home page */
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: clamp(30rem, 25vw, 40rem)
+}
+
+.pic {
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  aspect-ratio: 1;
+  width: 4rem;
+  border: 0;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+}
+
+.btn-left {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  background-image: url(./images/icon-previous.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-right {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  background-image: url(./images/icon-next.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home--2 {
+  border: 2px solid red;
+}
+
+.home--3 {
+  border: 2px solid red;
+  
+
+}
+
+.home--4 {
+  border: 2px solid red;
+  
+}
