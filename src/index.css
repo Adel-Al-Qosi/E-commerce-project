@@ -321,6 +321,7 @@ header .navbar {
   /* transition: 1s; */
   transform: translateX(-100vh);
   padding-top: 4rem;
+  z-index: 1000;
 }
 
 .navbar::after {
@@ -363,6 +364,7 @@ header .responsive-nav {
     padding-top: 0;
     order: 2;
     flex-direction: row;
+    z-index: 1000;
   }
 
   .navbar::after {
