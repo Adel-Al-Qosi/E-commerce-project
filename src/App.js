@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Cart from "./components/Cart"; // Import the Cart component
+import Cart from "./components/Cart";
 
 import { useState } from "react";
 
@@ -14,13 +14,15 @@ function App() {
   };
 
   return (
-    <Router>
+    <div>
+      <Router>
       <Header isCartVisible={isCartVisible} toggleCart={toggleCart} />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
       {isCartVisible && <Cart isVisible={isCartVisible} />}
     </Router>
+    </div>
   );
 }
 

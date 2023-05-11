@@ -530,7 +530,7 @@ header .responsive-nav {
 
 .btn-left {
   position: absolute;
-  left: 0;
+  left: 2rem;
   top: 45%;
   background-image: url(./images/icon-previous.svg);
   background-repeat: no-repeat;
@@ -539,7 +539,7 @@ header .responsive-nav {
 
 .btn-right {
   position: absolute;
-  right: 0;
+  right: 2rem;
   top: 45%;
   background-image: url(./images/icon-next.svg);
   background-repeat: no-repeat;
