@@ -246,7 +246,7 @@ nav ul li a:hover {
 }
 
 
-@media (min-width: 46em) {
+@media (min-width: 45em) {
   .header {
     justify-content: space-between;
     align-items: center;
@@ -349,7 +349,7 @@ header .responsive-nav {
   transform: none;
 }
 
-@media (min-width: 46em) {
+@media (min-width: 45em) {
   .nav-btn {
     display: none;
   }
@@ -359,12 +359,10 @@ header .responsive-nav {
     height: 100%;
     width: 100%;
     display: flex;
-    transition: 1s;
     transform: translateX(0);
     padding-top: 0;
     order: 2;
     flex-direction: row;
-    z-index: 1000;
   }
 
   .navbar::after {
@@ -447,7 +445,7 @@ header .responsive-nav {
   text-align: right;
 }
 
-@media (min-width: 46em) {
+@media (min-width: 45em) {
   .cart-header {
     border-bottom: 1px solid var(--clr-grayish-blue);
     padding-block: 0 1rem;
@@ -502,6 +500,8 @@ header .responsive-nav {
 }
 
 /* home page */
+
+
 .home {
   display: flex;
   flex-direction: column;
@@ -512,6 +512,7 @@ header .responsive-nav {
   width: 100%;
   height: clamp(30rem, 25vw, 40rem)
 }
+
 
 .pic {
   width: 100%;
@@ -544,6 +545,49 @@ header .responsive-nav {
   background-image: url(./images/icon-next.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (min-width: 45em) {
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-container {
+    margin-top: 5rem;
+    margin-inline: 3rem;
+  }
+
+  .gallery {
+    margin-bottom: 2rem;
+  }
+
+  .pic {
+    border-radius: 1rem;
+    aspect-ratio: 1;
+  }
+
+  .home--2 {
+    border: 2px solid red;
+  }
+
+  .info-container {
+    margin-inline: 2rem;
+  }
+
+  .home--3 {
+    border: 2px solid red;
+  }
+  
+  .home--4 {
+    border: 2px solid red;
+    width: 20rem;
+  }
+
+  .btn {
+    display: none;
+  }
 }
 
 .home--2 {
