@@ -1,6 +1,13 @@
-const ProductInfo = () => {
+const ProductInfo = ({name, company, description, price, discount, priceAfterDiscount}) => {
     return (
-        <p>product info</p>
+        <div>
+            <p>{company}</p>
+            <p>{name}</p>
+            <p>{description}</p>
+            <p>{price}</p>
+            <p>{discount}</p>
+            <p>{priceAfterDiscount}</p>
+        </div>
     )
 }
 
