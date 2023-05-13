@@ -8,6 +8,7 @@ import { useState } from "react";
 
 function App() {
   const [isCartVisible, setIsCartVisible] = useState(false);
+  const [cartProducts, setCartProducts] = useState([])
 
   const toggleCart = () => {
     setIsCartVisible(!isCartVisible);
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-      {isCartVisible && <Cart isVisible={isCartVisible} />}
+      {isCartVisible && <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} isVisible={isCartVisible} />}
     </Router>
     </div>
   );
