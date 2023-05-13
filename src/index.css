@@ -551,6 +551,18 @@ header .responsive-nav {
   background-position: center;
 }
 
+.thumbnails {
+  display: none;
+}
+
+.info {
+  border: 2px solid red;
+}
+
+.add-to-cart-btns {
+  border: 2px solid red;
+}
+
 @media (min-width: 46em) {
   .home {
     display: grid;
@@ -573,19 +585,20 @@ header .responsive-nav {
     aspect-ratio: 1;
   }
 
-  .home--2 {
+  .thumbnails {
     border: 2px solid red;
+    display: flex;
   }
 
   .info-container {
     margin-inline: 2rem;
   }
 
-  .home--3 {
+  .info {
     border: 2px solid red;
   }
 
-  .home--4 {
+  .add-to-cart-btns {
     border: 2px solid red;
     width: 20rem;
   }
@@ -595,14 +608,4 @@ header .responsive-nav {
   }
 }
 
-.home--2 {
-  border: 2px solid red;
-}
 
-.home--3 {
-  border: 2px solid red;
-}
-
-.home--4 {
-  border: 2px solid red;
-}
