@@ -1,12 +1,10 @@
-const ProductInfo = ({name, company, description, price, discount, priceAfterDiscount}) => {
+const ProductInfo = ({state, name, company, description}) => {
     return (
         <div>
-            <p>{company}</p>
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{price}</p>
-            <p>{discount}</p>
-            <p>{priceAfterDiscount}</p>
+            <p className="clr-orange fs-200">{company}</p>
+            <h1 className="fw-bold fs-700">{state}</h1>
+            <h1 className="fw-bold fs-700">{name}</h1>
+            <p className="clr-dark-grayish-blue">{description}</p>
         </div>
     )
 }

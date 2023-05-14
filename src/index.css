@@ -143,10 +143,6 @@ select {
   display: block;
 }
 
-.flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
-}
-
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -192,11 +188,23 @@ select {
   font-size: var(--fs-200);
 }
 
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
 .fs-900,
 .fs-800,
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.clr-orange {
+  color: var(--clr-orange);
+}
+
+.clr-dark-grayish-blue {
+  color: var(--clr-dark-grayish-blue);
 }
 
 /* ------------------- */
@@ -602,7 +610,6 @@ header .responsive-nav {
 
   .info {
     border: 2px solid red;
-    padding: 1rem;
   }
 
   .add-to-cart-btns {
