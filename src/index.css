@@ -60,8 +60,7 @@
 body,
 h1,
 h2,
-p figure,
-picture {
+p {
   margin: 0;
 }
 
@@ -205,6 +204,18 @@ select {
 
 .clr-dark-grayish-blue {
   color: var(--clr-dark-grayish-blue);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+  --flow-space: 0.75rem;
+}
+
+.flow-under {
+  margin-bottom: 3rem;
 }
 
 /* ------------------- */
@@ -560,11 +571,11 @@ header .responsive-nav {
 }
 
 .info {
-  border: 2px solid red;
+  
 }
 
 .add-to-cart-btns {
-  border: 2px solid red;
+  
 }
 
 @media (min-width: 46em) {
@@ -572,7 +583,7 @@ header .responsive-nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "gallery gallery info info";
-    gap: 2rem;
+    gap: min(2rem);
   }
 
   .gallery-container {
@@ -588,14 +599,13 @@ header .responsive-nav {
   }
 
   .pic {
-    border-radius: .7rem;
+    border-radius: 0.7rem;
   }
 
   .thumbnails {
     display: flex;
     min-width: 20rem;
     gap: 1rem;
-    
   }
 
   .thumbnail:hover,
@@ -604,18 +614,41 @@ header .responsive-nav {
   }
 
   .thumbnail {
-    max-width: 4.2rem;
-    border-radius: .7rem;
+    min-width: 4.2rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
   }
 
   .info-container {
     margin-block: 5rem;
     margin-inline: 2rem;
+    padding: 2rem;
     grid-area: info;
   }
 
   .info {
-    border: 2px solid red;
+    margin-block: 2rem;
+  }
+
+  .discount {
+    margin-left: 0.5rem;
+    background-color: var(--clr-pale-orange);
+    color: var(--clr-orange);
+    border-radius: 0.3rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .price-info--discount {
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .full-price {
+    color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through solid;
   }
 
   .add-to-cart-btns {

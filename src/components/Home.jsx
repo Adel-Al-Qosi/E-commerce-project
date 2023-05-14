@@ -10,10 +10,11 @@ function Home() {
   return (
     <main className="home">
       <div className="gallery-container">
-        <Gallery 
-        photoVisible={photoVisible}
-        setPhotoVisible={setPhotoVisible}
-        images={product.images} />
+        <Gallery
+          photoVisible={photoVisible}
+          setPhotoVisible={setPhotoVisible}
+          images={product.images}
+        />
         <div className="thumbnails">
           {product.thumbnails.map((thumbnail, i) => {
             return (
@@ -37,9 +38,11 @@ function Home() {
           />
         </div>
         <div className="price-info">
-          <p>{product.price}</p>
-          <p>{product.discount}</p>
-          <p>{product.priceAfterDiscount}</p>
+          <div className="flex price-info--discount">
+          <p className="fw-bold fs-600">{product.priceAfterDiscount}</p>
+          <p className="discount fs-400">{product.discount}</p>
+          </div>
+          <p className="full-price flow-under fw-bold">{product.price}</p>
         </div>
         <div className="add-to-cart-btns">
           <button>-</button>
