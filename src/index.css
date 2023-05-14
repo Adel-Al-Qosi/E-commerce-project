@@ -39,7 +39,7 @@
   :root {
     /* font-sizes */
     --fs-800: 6.25rem;
-    --fs-700: 3.5rem;
+    --fs-700: 3rem;
     --fs-600: 2rem;
     --fs-500: 1.75rem;
     --fs-400: 1.125rem;
@@ -522,13 +522,9 @@ header .responsive-nav {
 
 .gallery {
   position: relative;
-  width: 100%;
-  height: clamp(30rem, 25vw, 40rem);
 }
 
 .pic {
-  width: 100%;
-  height: 100%;
   /* background-size: cover; */
   background-position: center;
   object-fit: cover;
@@ -576,7 +572,7 @@ header .responsive-nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "gallery gallery info info";
-    gap: 8rem;
+    gap: 2rem;
   }
 
   .gallery-container {
@@ -587,19 +583,29 @@ header .responsive-nav {
 
   .gallery {
     margin-bottom: 2rem;
-    width: clamp(25rem, 25%, 40rem);
-    height: clamp(25rem, 25%, 40rem);
+    min-height: 20rem;
+    min-width: 20rem;
   }
 
   .pic {
-    border-radius: 1rem;
-    max-width: 100%;
-    max-height: 100%;
+    border-radius: .7rem;
   }
 
   .thumbnails {
-    border: 2px solid red;
     display: flex;
+    min-width: 20rem;
+    gap: 1rem;
+    
+  }
+
+  .thumbnail:hover,
+  .thumbnail:focus {
+    opacity: 0.5;
+  }
+
+  .thumbnail {
+    max-width: 4.2rem;
+    border-radius: .7rem;
   }
 
   .info-container {
