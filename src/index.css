@@ -520,9 +520,10 @@ header .responsive-nav {
 
 .pic {
   width: 100%;
-  min-height: 100%;
-  background-size: cover;
+  height: 100%;
+  /* background-size: cover; */
   background-position: center;
+  object-fit: cover;
 }
 
 .btn {
@@ -531,24 +532,23 @@ header .responsive-nav {
   border: 0;
   background-color: var(--clr-white);
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 45%;
 }
 
 .btn-left {
   position: absolute;
   left: 2rem;
-  top: 45%;
+
   background-image: url(./images/icon-previous.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .btn-right {
   position: absolute;
   right: 2rem;
-  top: 45%;
+
   background-image: url(./images/icon-next.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .thumbnails {
@@ -566,23 +566,27 @@ header .responsive-nav {
 @media (min-width: 46em) {
   .home {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "gallery gallery gallery info info";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "gallery gallery info info";
+    gap: 8rem;
   }
 
   .gallery-container {
     margin-top: 5rem;
     margin-inline: 3rem;
-    grid-area: "gallery";
+    grid-area: gallery;
   }
 
   .gallery {
     margin-bottom: 2rem;
+    width: clamp(25rem, 25%, 40rem);
+    height: clamp(25rem, 25%, 40rem);
   }
 
   .pic {
     border-radius: 1rem;
-    aspect-ratio: 1;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .thumbnails {
@@ -591,21 +595,21 @@ header .responsive-nav {
   }
 
   .info-container {
+    margin-block: 5rem;
     margin-inline: 2rem;
+    grid-area: info;
   }
 
   .info {
     border: 2px solid red;
+    padding: 1rem;
   }
 
   .add-to-cart-btns {
     border: 2px solid red;
-    width: 20rem;
   }
 
   .btn {
     display: none;
   }
 }
-
-
