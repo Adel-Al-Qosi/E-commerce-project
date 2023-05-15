@@ -12,8 +12,10 @@ function App() {
     setIsCartVisible(!isCartVisible);
   };
 
-  const handleAddToCart = (product) => {
-    setCartProducts((prevCartProducts) => [...prevCartProducts, product]);
+  const handleAddToCart = (product, num) => {
+    for (let i = 0; i < num; i++) {
+      setCartProducts((prevCartProducts) => [...prevCartProducts, product])
+    }
   };
 
   const handleRemoveFromCart = (productId) => {
@@ -36,15 +38,19 @@ function App() {
           handleClearCart={handleClearCart}
         />
         <Routes>
-          <Route path="/" element={<Home handleAddToCart={handleAddToCart} />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                handleRemoveFromCart={handleRemoveFromCart}
+                handleClearCart={handleClearCart}
+                handleAddToCart={handleAddToCart}
+              />
+            }
+          />
         </Routes>
         {isCartVisible && (
-          <Cart
-            cartProducts={cartProducts}
-            handleRemoveFromCart={handleRemoveFromCart}
-            handleClearCart={handleClearCart}
-            isVisible={isCartVisible}
-          />
+          <Cart cartProducts={cartProducts} isVisible={isCartVisible} />
         )}
       </Router>
     </div>

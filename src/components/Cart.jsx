@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 
-const Cart = ({ isVisible, cartProducts, setCartProducts }) => {
+const Cart = ({ isVisible, cartProducts}) => {
 
   
   return (
@@ -11,9 +11,9 @@ const Cart = ({ isVisible, cartProducts, setCartProducts }) => {
       </div>
       <div className="cart-body">
         {
-          /*cart stuff here*/
+          cartProducts.length === 0 ? <p>your cart is empty</p> : cartProducts.map(product => <p>{product.name}</p>)
         }
-        <p>your cart is empty</p>
+        
       </div>
     </div>
   );

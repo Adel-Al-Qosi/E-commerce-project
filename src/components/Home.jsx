@@ -4,9 +4,10 @@ import ProductInfo from "./productInfo";
 import productData from "../data/data";
 import { useState } from "react";
 
-function Home() {
+function Home({ handleRemoveFromCart, handleClearCart, handleAddToCart }) {
   const product = productData[0];
   const [photoVisible, setPhotoVisible] = useState(0);
+  const [numberOfProducts, setNumberOfProducts] = useState(0);
   return (
     <main className="home">
       <div className="gallery-container">
@@ -45,10 +46,13 @@ function Home() {
           <p className="full-price flow-under fw-bold">{product.price}</p>
         </div>
         <div className="add-to-cart-btns">
-          <button>-</button>
-          <p>hello</p>
-          <button>+</button>
-          <button>Add to cart</button>
+          <button onClick={() => setNumberOfProducts(numberOfProducts === 0 ? 0 : numberOfProducts - 1)}>-</button>
+          <p>{numberOfProducts}</p>
+          <button onClick={() => setNumberOfProducts(numberOfProducts + 1)}>+</button>
+          <button onClick={() => {
+            handleAddToCart(product, numberOfProducts)
+            setNumberOfProducts(0)
+          }}>Add to cart</button>
         </div>
       </div>
     </main>
