@@ -1,19 +1,20 @@
-const CartItem = ({ product }) => {
+const CartItem = ({ product, cartProducts, handleRemoveFromCart }) => {
+    
   return (
     <div className="cart-item">
-      <div>
+      <div className="cart-item--row">
         <img src={product.thumbnails[0]} alt="product" />
         <div>
-          <p className="fs-200">
+          <p>
             {product.state} {product.name}
           </p>
           <p>{product.priceAfterDiscount}</p>
         </div>
-        <button className="delete">
+        <button onClick={handleRemoveFromCart} className="delete">
           <span className="sr-only">Delete</span>
         </button>
       </div>
-      <button>Checkout</button>
+      <button className="btn-checkout">Checkout</button>
     </div>
   );
 };

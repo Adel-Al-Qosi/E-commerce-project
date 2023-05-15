@@ -18,11 +18,14 @@ function App() {
     }
   };
 
-  const handleRemoveFromCart = (productId) => {
-    setCartProducts((prevCartProducts) =>
-      prevCartProducts.filter((product) => product.id !== productId)
-    );
+  const handleRemoveFromCart = (index) => {
+    setCartProducts((prevCartProducts) => {
+      const updatedCart = [...prevCartProducts];
+      updatedCart.splice(index, 1);
+      return updatedCart;
+    });
   };
+  
 
   const handleClearCart = () => {
     setCartProducts([]);
@@ -35,22 +38,23 @@ function App() {
           isCartVisible={isCartVisible}
           toggleCart={toggleCart}
           cartProducts={cartProducts}
-          handleClearCart={handleClearCart}
+          
         />
         <Routes>
           <Route
             path="/"
             element={
               <Home
-                handleRemoveFromCart={handleRemoveFromCart}
-                handleClearCart={handleClearCart}
                 handleAddToCart={handleAddToCart}
               />
             }
           />
         </Routes>
         {isCartVisible && (
-          <Cart cartProducts={cartProducts} isVisible={isCartVisible} />
+          <Cart
+          handleClearCart={handleClearCart}
+          handleRemoveFromCart={handleRemoveFromCart}
+          cartProducts={cartProducts} isVisible={isCartVisible} />
         )}
       </Router>
     </div>

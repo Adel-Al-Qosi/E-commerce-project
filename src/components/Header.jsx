@@ -3,7 +3,7 @@ import logo from "../images/logo.svg";
 import avatar from "../images/image-avatar.png";
 import "../index.css";
 
-const Header = ({ isCartVisible, toggleCart }) => {
+const Header = ({ isCartVisible, toggleCart}) => {
   return (
     <header className="flex header">
       <div className="flex order">
@@ -17,7 +17,7 @@ const Header = ({ isCartVisible, toggleCart }) => {
           </button>
         ) : (
           <button className="cart" onClick={toggleCart}>
-            <span className="sr-only">open cart</span>
+            <span className="sr-only">cart</span>
           </button>
         )}
         <img src={avatar} alt="avatar" />
