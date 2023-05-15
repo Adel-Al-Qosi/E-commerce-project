@@ -7,7 +7,7 @@ import { useState } from "react";
 function Home({ handleAddToCart }) {
   const product = productData[0];
   const [photoVisible, setPhotoVisible] = useState(0);
-  const [numberOfProducts, setNumberOfProducts] = useState(0);
+  const [numberOfProducts, setNumberOfProducts] = useState(1);
   return (
     <main className="home">
       <div className="gallery-container">
@@ -66,7 +66,7 @@ function Home({ handleAddToCart }) {
             className="add-to-cart fw-bold fs-200"
             onClick={() => {
               handleAddToCart(product, numberOfProducts);
-              setNumberOfProducts(0);
+              setNumberOfProducts(1);
             }}
           >
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
