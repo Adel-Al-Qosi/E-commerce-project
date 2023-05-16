@@ -3,7 +3,7 @@ import logo from "../images/logo.svg";
 import avatar from "../images/image-avatar.png";
 import "../index.css";
 
-const Header = ({ isCartVisible, toggleCart}) => {
+const Header = ({ isCartVisible, toggleCart }) => {
   return (
     <header className="flex header">
       <div className="flex order">

@@ -1,5 +1,5 @@
 const CartItem = ({ product, cartProducts, handleRemoveFromCart }) => {
-    
+  // I wanted to use cartProducts to apply some functionality to the cart. but i will do that later.
   return (
     <div className="cart-item">
       <div className="cart-item--row">
